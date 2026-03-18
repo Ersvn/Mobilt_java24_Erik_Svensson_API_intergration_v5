@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+        <TextView
+                android:id="@+id/tvAboutTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="About CVEye"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+        <TextView
+                android:id="@+id/tvAboutIntro"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="CVEye är en enkel Android-applikation som jag har byggt i Kotlin för att integrera ett externt REST API. Appen hämtar information om kända sårbarheter (CVE:er) från National Vulnerability Database och visar dem i en lista med möjlighet att öppna en detaljvy."
+                android:textSize="16sp" />
+
+        <TextView
+                android:id="@+id/tvAboutEndpointTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Hur API:t används"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        <TextView
+                android:id="@+id/tvAboutEndpointText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Applikationen skickar en GET-request till NVD:s 2.0 CVE-endpoint. Jag begränsar resultatet till de senaste 30 dagarna för att visa aktuell data. Svaret kommer i JSON-format och parsas med Retrofit och Gson till Kotlin-objekt som sedan visas i en RecyclerView."
+                android:textSize="16sp" />
+
+        <TextView
+                android:id="@+id/tvAboutStructureTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Struktur och navigation"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        <TextView
+                android:id="@+id/tvAboutStructureText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Appen är uppbyggd med en MainActivity och fyra fragments: Home, Results, Detail och About. Navigationen är implementerad med Navigation Component och följer backstack-strukturen enligt uppgiften, där användaren alltid kan gå tillbaka steg för steg."
+                android:textSize="16sp" />
+
+        <TextView
+                android:id="@+id/tvAboutUiTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Orientation och UI"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+        <TextView
+                android:id="@+id/tvAboutUiText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Layouten är testad i både portrait och landscape-läge. Fokus har varit att hålla strukturen tydlig och att datan ska vara lätt att läsa oavsett skärmorientering."
+                android:textSize="16sp" />
+
+    </LinearLayout>
+</ScrollView>
